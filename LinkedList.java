@@ -110,13 +110,14 @@ public class LinkedList {
 			Node temp1=temp.next;
 			int l=1;
 			while(temp.next!=null){
-				temp = temp.next;
-				temp1=temp1.next;
-				l++;
 				if(l==(num-1)){
 					temp.next=temp1.next;
 					length-=1;
 				}
+				temp = temp.next
+;				temp1=temp1.next;
+				l++;
+				
 
 			}
 		}
@@ -169,15 +170,43 @@ public class LinkedList {
 		}
 
 		public void checkPalindrome(){
-			Node temp= head;
+			Node temp = head;
 			Node temp1= head;
-			while(temp.next!=null&& temp.next.next!=null){
-				temp = temp.next.next;
-				temp1= temp1.next;
+			LinkedList ll = new LinkedList();
+			LinkedList l = new LinkedList();
+			while(temp1!=null) {
+				l.insertAtLast(temp1.data);
+				temp1 = temp1.next;
+			}
+			while(temp!=null) {
+				ll.insertAtFirst(temp.data);
+				temp=temp.next;
+			}
+			temp = l.head;
+			temp1=this.head;
+			while(temp.next!=null && temp1.next!=null)
+			{
+				if(temp.data==temp1.data) {
+					temp = temp.next;
+					temp1 = temp1.next;
+				}
+				else {
+					System.out.println("Not  a palindrome");
+					break;
+				}
+			}
+			if(temp.next==null&& temp1.next==null) {
+				System.out.println("It is a palindrome");
+			}
+			
+			
+		
+			
+			
 			}
 
 
-		}
+		
 
 		// public void findMid(){
 		// 	Node temp = head;
@@ -234,25 +263,131 @@ public class LinkedList {
 
 		public void evenPosition(){
 			Node temp = head;
-
-		}
-
-		// public void duplicateDeletion(){
-		// 	Node temp = head;
-		// 	while(temp.next!=null){
-		// 		if(temp.)
-		// 	}
-		// }
-
-		
-
-		public void fun(Node head){
-			if(head ==null){
-				return;
+			while(temp.next.next!=null) {
+				System.out.println(temp.data);
+				temp = temp.next.next;
+				
 			}
-			fun(head.next);
-			System.out.println(head.data);
+			if(temp.next!=null) {
+				System.out.println(temp.data);
+			}
+			
 		}
+		
+		public void mergeLists(LinkedList l) {
+			this.sortLinkedList();
+			l.sortLinkedList();
+			l.print();
+			Node temp = this.head;
+			Node temp1 = l.head;
+			while(temp1.next!=null) {
+				if(temp.data>temp1.data){
+					Node newNode = new Node(temp1.data);
+					newNode.next=temp;
+					head= newNode;
+					temp1= temp1.next;
+			}		
+			else{
+				while(temp.next!=null){
+				if(temp.data<temp1.data){
+					if(temp.next.data<temp1.data){
+						temp = temp.next;
+					}
+					else if(temp.next.data>temp1.data){
+						Node newNode = new Node(temp1.data);
+						newNode.next = temp.next;
+						temp.next= newNode;
+						temp1=temp1.next;
+						print();
+						System.out.println();
+
+						break;
+					}
+					
+				}
+			}
+				
+				
+				
+				
+			}
+				
+			
+		}
+			if(temp.next==null){
+				Node newNode = new Node(temp1.data);
+				temp.next = newNode;
+			newNode.next= null;
+			}
+			
+		
+		
+		}
+
+		 public void duplicateDeletion(){
+		 	Node temp = head;
+		 	while(temp.next!=null){
+		 		if(temp.data==temp.next.data) {
+		 			Node temp1= temp.next;
+		 			temp.next= temp1.next;
+		 			
+		 		}
+		 		else {
+		 			temp =temp.next;
+		 		}
+		 	}
+		 }
+
+		 public void random(LinkedList l){
+		 	Node temp = head;
+		 	while(temp.next!=null){
+		 		temp = temp.next;
+		 	}
+		 	if(temp.next==null){
+		 		temp.next = l.head;
+		 	}
+		 	sortLinkedList();
+		 }
+		 public void insertAtPos(int pos,int value){
+		 	Node newNode= new Node(value);
+		 	Node temp= head;
+		 	Node temp1=head.next;
+		 	Node p=null;
+		 	int l=1;
+		 	while(temp.next!=null){
+		 		if(l==(pos-1)){
+		 			p=temp.next;
+		 			temp.next=newNode;
+		 			newNode.next =p;
+		 			break;
+		 		}
+		 		temp=temp.next;
+		 		temp1= temp1.next;
+		 		l++;
+		 	}
+
+		 }
+
+		 public void add(LinkedList s){
+		 	Node t = head;
+		 	Node r = s.head;
+		 	LinkedList l3 = new LinkedList();
+		 	while(t!=null&& r!=null){
+		 		int d = t.data+r.data;
+		 		l3.insertAtFirst(d);
+		 		t = t.next;
+		 		r = r.next;
+		 	}
+		 	Node h = l3.head;
+		 	while(h!=null){
+		 		System.out.println(h.data);
+		 		h= h.next;
+		 	}
+		 }
+
+
+
+
 
 
 }

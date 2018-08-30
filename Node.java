@@ -11,9 +11,6 @@ public class Node {
 		this.data = d;
 		this.next=null;
 	}
-	public Node(Node n) {
-		this.next=n;
-	}
 	
 
 }

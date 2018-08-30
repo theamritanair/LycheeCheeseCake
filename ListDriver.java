@@ -2,36 +2,66 @@
 public class ListDriver {
 	public static void main(String[] args) {
 		LinkedList l= new LinkedList();
-		l.addNode(10);
-		l.addNode(20);
-		l.addNode(30);
-		l.addNode(40);
-		l.addNode(40);
-		l.addNode(50);
+		l.addNode(1);
+		l.addNode(2);
+		// l.addNode(3);
+		// l.addNode(4);
+		// l.addNode(6);
+		// l.addNode(7);
 		
 		l.print();
-		// l.deleteAtPos(5);
-		// l.deleteAtPos(3);
+		System.out.println();	
+		LinkedList t= new LinkedList();
+		t.addNode(12);
+		t.addNode(34);
+		// t.addNode(-1);
+		// l.deleteAtLast();
+		// t.deleteAtLast();
 		// l.print();
-		
-		// l.sortInsert(25);
-		// l.print();
-		// l.deleteAtFirst();
-		// l.print();
-		// l.isEmpty();
-
-		// l.isLastElement();
-
-		
-		// l.fun(head);
-		l.findMiddle();
-
-		// l.printLength();
+		// t.print();
 		// System.out.println();
-		// l.findMiddle();
-		// l.reverse();
+			// l.insertAtPos(5,50);
+			 // l.deleteAtPos(5);
+// 			 l.deleteAtPos(3);
+			 t.print();
+// //			
+// 			 l.sortInsert(25);
+// 			l.print();
+// 			l.deleteAtFirst();
+// 			 l.print();
+// 		 l.isEmpty();
+	
+// 		 l.isLastElement();
+// //
+		l.add(t);
+//
+//		 l.printLength();
+//		 System.out.println();
+//		 l.findMiddle();
+//		 l.reverse();
+//		 l.print();
+//		 l.nFromEnd(3);
+//		 l.evenPosition();
+//		
+//		l.sortLinkedList();
+//		l.print();
+//		System.out.println();
+//		t.sortLinkedList();
+//		t.print();
+//		System.out.println();
+		// l.mergeLists(t);
 		// l.print();
-		// l.nFromEnd(3);
+//
+//		
+		// 
+		// l.random(t);
+		// l.print();
+		// l.checkPalindrome();
+		// l.duplicateDeletion();
+		// l.print();
+		
+		
+		
 
 
 		
