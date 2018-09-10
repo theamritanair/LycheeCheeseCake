@@ -1,19 +1,19 @@
 
 public class ListDriver {
 	public static void main(String[] args) {
-		LinkedList l= new LinkedList();
-		l.addNode(1);
-		l.addNode(2);
-		// l.addNode(3);
-		// l.addNode(4);
-		// l.addNode(6);
-		// l.addNode(7);
+		// LinkedList l= new LinkedList();
+		// l.addNode(1);
+		// l.addNode(2);
+		// // l.addNode(3);
+		// // l.addNode(4);
+		// // l.addNode(6);
+		// // l.addNode(7);
 		
-		l.print();
-		System.out.println();	
-		LinkedList t= new LinkedList();
-		t.addNode(12);
-		t.addNode(34);
+		// l.print();
+		// System.out.println();	
+		// LinkedList t= new LinkedList();
+		// t.addNode(12);
+		// t.addNode(34);
 		// t.addNode(-1);
 		// l.deleteAtLast();
 		// t.deleteAtLast();
@@ -23,8 +23,8 @@ public class ListDriver {
 			// l.insertAtPos(5,50);
 			 // l.deleteAtPos(5);
 // 			 l.deleteAtPos(3);
-			 t.print();
-// //			
+// 			 t.print();
+// // //			
 // 			 l.sortInsert(25);
 // 			l.print();
 // 			l.deleteAtFirst();
@@ -33,7 +33,7 @@ public class ListDriver {
 	
 // 		 l.isLastElement();
 // //
-		l.add(t);
+		// l.add(t);
 //
 //		 l.printLength();
 //		 System.out.println();
@@ -59,6 +59,19 @@ public class ListDriver {
 		// l.checkPalindrome();
 		// l.duplicateDeletion();
 		// l.print();
+
+		DLinkedList dl = new DLinkedList();
+		dl.addNode(1);
+		dl.addNode(2);
+		dl.addNode(3);
+		dl.addNode(4);
+		dl.addNode(5);
+		dl.print();
+		// dl.insertAtPos(5, 8);
+		dl.reverseK(3);
+		
+		dl.print();
+
 		
 		
 		

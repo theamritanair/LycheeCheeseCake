@@ -305,10 +305,7 @@ public class LinkedList {
 					}
 					
 				}
-			}
-				
-				
-				
+			}	
 				
 			}
 				
