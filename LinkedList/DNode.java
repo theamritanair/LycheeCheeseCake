@@ -1,9 +1,9 @@
 class DNode{
 	int data;
-	Node prev;
-	Node next;
+	DNode prev;
+	DNode next;
 
-	Node(int data){
+	DNode(int data){
 		this.data= data;
 		this.next=null;
 	}

@@ -1,25 +1,15 @@
-class Node{
-	int data;
-	Node prev;
-	Node next;
-
-	Node(int data){
-		this.data= data;
-		this.next=null;
-	}
-}
-
+//Doubly Linked List
 public class DLinkedList{
-	Node head;
+	DNode head;
 
 	public void addNode(int data){
-		Node temp = new Node(data);
+		DNode temp = new DNode(data);
 
 		if(head==null){
 			head=temp;
 			temp.next=null;
 		}else{
-			Node p = head;
+			DNode p = head;
 			while(p.next!=null){
 				p = p.next;
 			}
@@ -33,7 +23,7 @@ public class DLinkedList{
 		if(head==null){
 			System.out.println("Empty list");
 		}else{
-			Node t = head;
+			DNode t = head;
 			while(t.next!=null){
 				System.out.print(t.data+"");
 				t= t.next;
@@ -43,8 +33,8 @@ public class DLinkedList{
 	}
 
 	public void insertAtPos(int n,int data){
-		Node newNode = new Node(data);
-		Node p = head;
+		DNode newNode = new DNode(data);
+		DNode p = head;
 		int i=1;
 		while(p.next!=null){
 			i++;
@@ -63,7 +53,7 @@ public class DLinkedList{
 	}
 
 	public void deleteGivenNode(int data){
-		Node p = head;
+		DNode p = head;
 		while(p.next!=null){
 			if(p.data==data){
 				if(p==head){
@@ -86,7 +76,7 @@ public class DLinkedList{
 
 	public void reverseK(int k){
     
-    Node temp=head,p;
+    DNode temp=head,p;
     temp=head;
     while(k-->0) {
       p=temp.prev;
