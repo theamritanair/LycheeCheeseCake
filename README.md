@@ -1,6 +1,6 @@
 # LycheeCheeseCake
 
-[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](https://github.com/AbhilashG97/LycheeCheeseCake/blob/lychee/LICENSE)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](https://github.com/theamritanair/LycheeCheeseCake/blob/master/LICENSE)
 
 ![frozenCheescake300x448](/images/frozenCheescake300x448.jpg)
 
